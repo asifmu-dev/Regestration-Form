@@ -1,0 +1,216 @@
+/* ---------- Page background with gradient ---------- */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1f2937;
+  box-sizing: border-box;
+}
+
+/* ---------- Two-column layout ---------- */
+.layout {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 750px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Card ---------- */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  color: #312e81;
+}
+
+.card h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  color: #312e81;
+}
+
+.subtitle {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ---------- Form fields ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 12px 0 6px;
+  color: #374151;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  background: #f9fafb;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+input:focus,
+select:focus {
+  border-color: #6366f1;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* ---------- Radio buttons ---------- */
+.radios {
+  display: flex;
+  gap: 18px;
+  margin-top: 4px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  margin: 0;
+  cursor: pointer;
+  padding: 8px 12px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.radio:hover {
+  border-color: #a5b4fc;
+  background: #f5f3ff;
+}
+
+.radio input {
+  accent-color: #6366f1;
+  cursor: pointer;
+}
+
+/* ---------- Error message ---------- */
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+
+/* ---------- Buttons ---------- */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.05s, box-shadow 0.2s;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button[type="submit"] {
+  flex: 1;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+button[type="button"] {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+button[type="button"]:hover {
+  background: #d1d5db;
+}
+
+/* ---------- Student list ---------- */
+.empty {
+  color: #9ca3af;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+li {
+  background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+  border: 1px solid #ddd6fe;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+li strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #4c1d95;
+}
+
+li p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+@media (max-width: 750px) {
+  .card {
+    padding: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
